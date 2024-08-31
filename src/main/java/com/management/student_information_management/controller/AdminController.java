@@ -67,7 +67,7 @@ public class AdminController {
         
     }
 
-    @GetMapping("/search")
+    @GetMapping("/search-sgpa")
     public String searchForSGPA(){
 
         return "admin/search";
@@ -93,10 +93,21 @@ public class AdminController {
         return "redirect:dashboard";
     }
 
-    @GetMapping("/add-attendence")
-    public String addAttendence(){
+    @GetMapping("/search-attendence")
+    public String searchForAttendence(){
+
+        return "admin/search_attendence";
+    }
+
+    @GetMapping("/add-sgpa")
+    public String addAttendenceForm(@RequestParam("rollNo") String rollNo, Model m){
+
+        System.out.println(rollNo);
+
+        m.addAttribute("rollNo", rollNo);
 
         return "admin/addAttendence";
     }
+
 
 }
