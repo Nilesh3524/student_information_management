@@ -20,13 +20,12 @@
             <form method="post" th:action= "@{/admin/process-add-sgpa}">
               <!-- Ensure form takes full width of the card -->
               <!-- SGPA Fields -->
+              <input type="hidden" name="rollNo" th:value="${rollNo}">
               <h4 class="mt-4">SGPA for Each Semester</h4>
               <div class="row my-3">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa1">SGPA 1st Semester</label>
-
-                    <input type="hidden" name="sem" value="1">
 
                     <input
                       type="number"
@@ -38,7 +37,7 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa1"
                     />
                   </div>
                 </div>
@@ -46,7 +45,6 @@
                   <div class="form-group">
                     <label for="sgpa2">SGPA 2nd Semester</label>
 
-                    <input type="hidden" name="sem" value="2">
                     <input
                       type="number"
                       class="form-control"
@@ -57,7 +55,7 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa2"
                     />
                   </div>
                 </div>
@@ -66,7 +64,6 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa3">SGPA 3rd Semester</label>
-                    <input type="hidden" name="sem" value="3">
                     <input
                       type="number"
                       class="form-control"
@@ -77,14 +74,13 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa3"
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa4">SGPA 4th Semester</label>
-                    <input type="hidden" name="sem" value="4">
                     <input
                       type="number"
                       class="form-control"
@@ -95,7 +91,7 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa4"
                     />
                   </div>
                 </div>
@@ -104,7 +100,6 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa5">SGPA 5th Semester</label>
-                    <input type="hidden" name="sem" value="5">
                     <input
                       type="number"
                       class="form-control"
@@ -115,14 +110,13 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa5"
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa6">SGPA 6th Semester</label>
-                    <input type="hidden" name="sem" value="6">
                     <input
                       type="number"
                       class="form-control"
@@ -133,7 +127,7 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa6"
                     />
                   </div>
                 </div>
@@ -142,7 +136,6 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa7">SGPA 7th Semester</label>
-                    <input type="hidden" name="sem" value="7">
                     <input
                       type="number"
                       class="form-control"
@@ -153,14 +146,13 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa7"
                     />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="sgpa8">SGPA 8th Semester</label>
-                    <input type="hidden" name="sem" value="8">
                     <input
                       type="number"
                       class="form-control"
@@ -171,7 +163,7 @@
                       step="0.01"
                       value="0"
                       required
-                      name="sgpa"
+                      name="sgpa8"
                     />
                   </div>
                 </div>

@@ -24,8 +24,7 @@ import lombok.ToString;
 public class Subjects {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int sem;
 
     private String sub1;
     private String sub2;

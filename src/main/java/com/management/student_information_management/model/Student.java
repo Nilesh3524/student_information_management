@@ -9,7 +9,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -49,14 +48,13 @@ public class Student {
 
     private String participation;
 
+    private double avgSGPA;
+
+    private double avgAttendence;
+
     // subjects
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "student")
     private List<Subjects> subjects=new ArrayList<>();
-
-
-    //days
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "student")
-    private List<Days> days=new ArrayList<>();
 
 
     //sgpa

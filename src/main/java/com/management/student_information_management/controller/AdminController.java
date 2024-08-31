@@ -1,6 +1,8 @@
 package com.management.student_information_management.controller;
 
 
+import java.util.stream.Stream;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.management.student_information_management.helper.Message;
 import com.management.student_information_management.model.SGPA;
@@ -64,16 +67,28 @@ public class AdminController {
         
     }
 
+    @GetMapping("/search")
+    public String searchForSGPA(){
+
+        return "admin/search";
+    }
+
     @GetMapping("/add-sgpa")
-    public String addSGPAForm(){
+    public String addSGPAForm(@RequestParam("rollNo") String rollNo, Model m){
+
+        System.out.println(rollNo);
+
+        m.addAttribute("rollNo", rollNo);
 
         return "admin/addSGPA";
     }
 
     @PostMapping("/process-add-sgpa")
-    public String addSgpa(@ModelAttribute("sgpa") SGPA sgpa){
+    public String addSgpa(@ModelAttribute("sgpa") SGPA sgpa,@RequestParam("rollNo") String rollNo){
 
         System.out.println(sgpa);
+
+        System.out.println(rollNo);
 
         return "redirect:dashboard";
     }
