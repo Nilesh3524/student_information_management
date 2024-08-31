@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="admin/base::layout(~{::section})"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div class="container flex-fill mt-3" style="width: 1250px;" >
+        <div class="card">
+          <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">Add Attendence</h4>
+          </div>
+          <div class="card-body">
+            <form >
+              <!-- Ensure form takes full width of the card -->
+              <!-- SGPA fields here -->
+
+              <!-- Attendance Fields -->
+              <h4 class="mt-4">Attendance for Each Semester</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance1">Attendance 1st Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance1"
+                      placeholder="Enter Attendance for 1st Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance2">Attendance 2nd Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance2"
+                      placeholder="Enter Attendance for 2nd Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance3">Attendance 3rd Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance3"
+                      placeholder="Enter Attendance for 3rd Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance4">Attendance 4th Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance4"
+                      placeholder="Enter Attendance for 4th Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance5">Attendance 5th Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance5"
+                      placeholder="Enter Attendance for 5th Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance6">Attendance 6th Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance6"
+                      placeholder="Enter Attendance for 6th Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance7">Attendance 7th Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance7"
+                      placeholder="Enter Attendance for 7th Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="attendance8">Attendance 8th Semester (%)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="attendance8"
+                      placeholder="Enter Attendance for 8th Semester"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value="0"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
